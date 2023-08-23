@@ -1,14 +1,6 @@
-const todoFactory = (title, description) => {
-    let completed = false;
-  
-    const getTitle = () => title;
-    const getDescription = () => description;
-    const isCompleted = () => completed;
-    const toggleCompletion = () => {
-      completed = !completed;
-    };
-  
-    return { getTitle, getDescription, isCompleted, toggleCompletion };
-  };
-  
-  export default todoFactory;
+// todo factory is going to be the building blocks for creating todos
+function todoFactory(title, description, priority, date) {
+    return {title, description, priority, date};
+}
+
+export default todoFactory;
